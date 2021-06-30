@@ -8,41 +8,41 @@ export const GlobalStyle = createGlobalStyle`
     --font-color: #E8E6E3;
   }
 
-  *{
+  * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
   }
 
   html {
-    @media (max-width:1080px){
+    @media (max-width:1080px) {
     font-size:93.75%;
     }
 
-    @media (max-width:720px){
+    @media (max-width:720px) {
       font-size:87.5%;
     }
   }
 
-  body, input,textarea, button {
+  body, input, textarea, button {
     font-family: "Lato", sans-serif;
     color: var(--font-color);
     font-weight:400;
 
   }
 
-  h1,h2,h3,h4,h5,h6,strong{
+  h1, h2, h3, h4, h5, h6, strong {
     font-weight: 700;
   }
 
-  body{
+  body {
     background-color: var(--background);
     -webkit-font-smoothing: antialiased;
     width: 100%;
     min-height: 100vh;
     position: relative;
 
-    &::before{
+    &::before {
       content:"";
       position: absolute;
       top: 0;
@@ -55,7 +55,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  button{
+  button {
     cursor: pointer;
   }
 
