@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --background: #00a5be;
+    --background: #008498;
+    --font-color: #E8E6E3;
   }
 
   *{
@@ -19,6 +20,16 @@ export const GlobalStyle = createGlobalStyle`
     @media (max-width:720px){
       font-size:87.5%;
     }
+  }
+
+  body, input,textarea, button {
+    font-family: "Lato", sans-serif;
+    color: var(--font-color);
+    font-weight:400;
+  }
+
+  h1,h2,h3,h4,h5,h6,strong{
+    font-weight: 700;
   }
 
   body{
