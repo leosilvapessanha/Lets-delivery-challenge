@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
+import stars from '../assets/stars.png';
+
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --background: #008498;
+    --background: #0F0F0F;
     --font-color: #E8E6E3;
   }
 
@@ -26,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Lato", sans-serif;
     color: var(--font-color);
     font-weight:400;
+
   }
 
   h1,h2,h3,h4,h5,h6,strong{
@@ -35,6 +38,21 @@ export const GlobalStyle = createGlobalStyle`
   body{
     background-color: var(--background);
     -webkit-font-smoothing: antialiased;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+
+    &::before{
+      content:"";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 25% ;
+      background-image: url(${stars});
+      opacity: 0.3;
+    }
   }
 
   button{
@@ -45,5 +63,4 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
-
 `;
